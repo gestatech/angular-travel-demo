@@ -1,0 +1,76 @@
+<div id="form-container" class="detail-page">
+
+    <div class="col-lg-6">
+        <img src="{{selectedTour.image['@link']}}" alt="tour image" class="detail-img" height="310" width="510"/>
+
+        <hr/>
+        <p class="detail-description">{{ selectedTour.name }}</p>
+
+        <p class="second-description">
+            {{ selectedTour.description}}
+        </p>
+        <p class="detail-body">
+            {{ selectedTour.body | removeHTMLTags}}
+            <!-- {{ selectedTour.body }} -->
+        </p>
+    </div>
+
+    <div class="col-lg-6 checkout-sum">
+        <!-- <p class="detail-description">{{ selectedTour.name }}</p> -->
+        <ul class="detail-body">
+            <li>
+                Location:
+                {{ selectedTour.location }}
+            </li>
+            <li>
+                Duration:
+                {{ selectedTour.duration }}
+            </li>
+            <li>
+                Tour Operator:
+                {{ selectedTour.author }}
+            </li>
+        </ul>
+
+        <div class="form-this-nice">
+
+            <!-- FORM -->
+            <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+
+                <!-- NAME -->
+                <div class="form-group">
+                    <label class="form-text">Name</label>
+                    <input type="text" name="name" class="form-control" ng-model="name" required>
+                </div>
+
+                <!-- USERNAME -->
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label class="form-text">Email</label>
+                    <input type="email" name="email" class="form-control" ng-model="email">
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label class="form-text">Phone</label>
+                    <input type="email" name="email" class="form-control" ng-model="email">
+                </div>
+
+                <!-- Num of travellers -->
+                <div class="form-group">
+                    <label class="form-text">Number of Travellers</label>
+                    <input type="email" name="email" class="form-control" ng-model="email">
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <a ng-href="#/checkout/{{selectedTour['@id']}}" class="btn btn-default form-submit buttons" role="button">Instant Book
+                    <span class="glyphicon glyphicon-flash"></span>
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>

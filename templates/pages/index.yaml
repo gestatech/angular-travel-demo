@@ -1,0 +1,3 @@
+title: Magnolia Travels Angular
+templateScript: /magnolia-travels/templates/pages/index.ftl
+renderType: freemarker

@@ -1,0 +1,28 @@
+.search-box {
+  width: 80% !important;
+}
+
+.search-results {
+  margin-top: 0px;
+  margin-left: 0px !important;
+}
+
+.weekend h4 {
+  display: none;
+}
+
+#weekend-text {
+  font-size: 20px !important;
+}
+
+.detail-img {
+    margin-left: 0px;
+  }
+
+.checkout-sum {
+  border-radius: 0px;
+  background-color: none;
+  color: black;
+  padding: 8px;
+  border: 0px;
+}

@@ -1,0 +1,33 @@
+<div class="page-header">
+    <!-- <h1>{{ json.destination[0]['displayName']  }}
+        <strong>{{ item.destination[0]['displayName'] }}</strong>
+        <strong>{{ tours.destination[0]['displayName'] }}</strong> -->
+    <h1 class="capitalize">
+        <strong>{{ selectedDestination }}</strong>
+        <small>Available Tours</small>
+    </h1>
+</div>
+
+
+<div class="col-md-6" ng-repeat="item in tours | filter: { destination: {name: selectedDestination} }">
+    <div class="thumbnail destination-card">
+        <a ng-href="#/detail/{{item['@id']}}">
+
+            <div class="destination-images" style="background-image:url({{ item.image['@link'] }})">
+                <div class="caption" id="destination-text">
+                    <h3>
+                        {{ item.name }}</h3>
+                    <p>
+                        {{ item.description }}
+                        <br>
+                        {{ item.location }}
+                        <br>
+                        {{ item.duration }}
+                        Days
+                    </p>
+                </div>
+            </div>
+
+        </a>
+    </div>
+</div>

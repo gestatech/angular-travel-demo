@@ -1,18 +1,3 @@
-<script>
-  $( function() {
-
-      var $container = $('#container');
-
-      $container.imagesLoaded( function() {
-        $container.masonry({
-          columnWidth: function( containerWidth ) {
-            return containerWidth / 0
-          }
-        });
-      });
-
-    });
-</script>
 
 <div class="center-this-pls">
     <div class="col-min text-header">
@@ -72,8 +57,9 @@
                     </select>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 search-bar search-bar-eyebrow">
-                  <p class="eyebrow-text ">Search </p>
-                  <input type="text" placeholder="" class=" form-control" ng-model="searchLocation">
+                    <p class="eyebrow-text ">Search
+                    </p>
+                    <input type="text" placeholder="" class=" form-control" ng-model="searchLocation">
                 </div>
             </div>
 
@@ -82,12 +68,11 @@
 </div>
 
 
-
 <!-- <div class="row"> -->
-<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 repeated-item" ng-repeat="item in tours | filter:{duration: duration} | filter: searchLocation | filter:displayName | filter:destination ">
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 repeated-item" ng-repeat="item in tours | filter:{duration: duration} | filter: searchLocation | filter:{tourTypes: {displayName: displayName}} | filter:destination ">
     <div class="thumbnail destination-card ">
 
-           <div class="hovereffect">
+        <div class="hovereffect">
             <div class="destination-images" style="background-image:url({{ item.image['@link'] }})">
 
                 <!-- <img src="{{ item.image['@link'] }}" class="img-responsive" alt="..."> -->
@@ -106,13 +91,14 @@
                 </div>
 
             </div>
-<div class="overlay">
-    <a class="info" ng-href="#/detail/{{item['@id']}}"> View Details  </a>r
-</div>
-
+            <div class="overlay">
+                <a class="info" ng-href="#/detail/{{item['@name']}}">
+                    View Details
+                </a>
+            </div>
 
         </div>
-      </div>
+    </div>
 
 </div>
 
@@ -121,10 +107,6 @@
     <img ng-src="{{ item.image['@link'] }}">
   </div>
 </div> -->
-
-
-
-
 
 <!-- </div> -->
 <!--
@@ -145,10 +127,10 @@
         </div>
     </div>
 -->
-</div>
+
 
 <!-- This is the "Featured weekend tours" -->
-<br>
+
 <!-- <div class="weekend page-header center-this-pls">
     <h3 class="">
         Escape for the Weekend

@@ -15,8 +15,7 @@
         </p>
     </div>
 
-    <div class="col-lg-6 checkout-sum">
-        <!-- <p class="detail-description">{{ selectedTour.name }}</p> -->
+<!--    <div class="col-lg-6 checkout-sum">
         <ul class="detail-body">
             <li>
                 Location:
@@ -30,41 +29,79 @@
                 Tour Operator:
                 {{ selectedTour.author }}
             </li>
-        </ul>
+        </ul> -->
 
-        <div class="form-this-nice">
 
-            <!-- FORM -->
+      <!--  <div class="col-md-4 col-md-offset-1">
+          <div class="card">
+            <form class="form" action="" method="">
+              <div class="header header-primary text-center">
+              <h4>Sign Up</h4>
+                  <div class="social-line">
+                    <a class="btn btn-simple btn-just-icon" href="#"></a>
+                    <i class="material-icons">account-multiples</i>
+                  </div>
+                </div>
+                <p class="text-divider">Or Be Classical</p>
+                <div class="content">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                     <i class="material-icons">face</i>
+                    </span>
+                    <div class="form-group is-empty">
+                      <input class="form-control" placeholder="First Name..." type="text">
+                      <span class="material-input"></span>
+                    </div>
+                  </div>
+                </div>
+
+            </form>
+          </div>
+
+        </div> -->
+
+
+
+          <!-- Original form is below  -->
+    <!-- <div class="form-this-nice"> -->
+<div class="col-lg-6">
+  <ul class="detail-body">
+      <li>
+          Location:
+          {{ selectedTour.location }}
+      </li>
+      <li>
+          Duration:
+          {{ selectedTour.duration }}
+      </li>
+      <li>
+          Tour Operator:
+          {{ selectedTour.author }}
+      </li>
+  </ul>
             <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
 
-                <!-- NAME -->
                 <div class="form-group">
                     <label class="form-text">Name</label>
                     <input type="text" name="name" class="form-control" ng-model="name" required>
                 </div>
 
-                <!-- USERNAME -->
-
-                <!-- EMAIL -->
                 <div class="form-group">
                     <label class="form-text">Email</label>
                     <input type="email" name="email" class="form-control" ng-model="email">
                 </div>
 
-                <!-- Phone -->
                 <div class="form-group">
                     <label class="form-text">Phone</label>
                     <input type="email" name="email" class="form-control" ng-model="email">
                 </div>
 
-                <!-- Num of travellers -->
                 <div class="form-group">
                     <label class="form-text">Number of Travellers</label>
                     <input type="email" name="email" class="form-control" ng-model="email">
                 </div>
 
-                <!-- SUBMIT BUTTON -->
-                <a ng-href="#/checkout/{{selectedTour['@id']}}" class="btn btn-default form-submit buttons" role="button">Instant Book
+                <a ng-href="#/checkout/{{selectedTour['@name']}}" class="btn btn-default form-submit buttons" role="button">Instant Book
                     <span class="glyphicon glyphicon-flash"></span>
                 </a>
 
@@ -72,5 +109,4 @@
 
         </div>
 
-    </div>
-</div>
+     </div>

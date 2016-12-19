@@ -55,7 +55,7 @@
                 [#if item["jcr:primaryType"] == "mgnl:folder"]
                     [@scan item/]
                 [#elseif item["jcr:primaryType"] == mainNodeType]
-                  [#assign json = jsonfn.appendFrom(json!"[]",item).expand("tourTypes", "category").expand("destination","category").expand("image", "dam").add("name","body", "description", "duration", "location","displayName", "author","tourTypes","destination","@link", "@id", "@path").print()]
+                  [#assign json = jsonfn.appendFrom(json!"[]",item).expand("tourTypes", "category").expand("destination","category").expand("image", "dam").add("name","body", "description", "duration", "location","displayName", "author","tourTypes","destination","@link", "@id", "@path", "@name").print()]
                 [/#if]
             [/#list]
         [/#macro]
@@ -100,7 +100,7 @@
 
             })
 
-          
+
 
             travel.controller('MainController', ['$scope',function($scope){
                 $scope.searchLocation   = [];
@@ -118,7 +118,7 @@
                 var detailId = $routeParams.id;
 
                 $scope.tours.forEach(function(item) {
-                  if(detailId == item['@id']){
+                  if(detailId == item['@name']){
                       $scope.selectedTour = item;
                   }
                 });
@@ -157,6 +157,7 @@
             .filter('removeHTMLTags', function() {
           	return function(text) {
           		return  text ? String(text).replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '') : "";
+              // return unescape(text);
           	};
 
           })

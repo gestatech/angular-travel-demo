@@ -425,7 +425,106 @@ width: 100% !important;
      height: 0px;
  }
 
+/*form section*/
+.header {
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -40px;
+    padding: 20px 0;
+}
 
+.header-primary{
+background: linear-gradient(60deg,#ed7437, #ff6633);
+}
+
+/*.card {
+  margin-top: 40px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    border-radius: 3px;
+    color: rgba(0,0,0, 0.87);
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.social-line {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn-simple {
+  background-color: transparent;
+box-shadow: none;
+}
+
+.btn-just-icon {
+  font-size: 18px;
+padding: 10px 10px;
+line-height: 1em;
+
+}*/
+
+.text-divider {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.form-control {
+    border: 0;
+    background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: transparent;
+    transition: background 0s ease-out;
+    float: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-weight: 400;
+    display: table-cell;
+    height: 36px;
+padding: 7px 0;
+font-size: 14px;
+line-height: 1.42857;
+}
+.input-group-addon {
+    border: 0;
+    background: transparent !important;
+    padding: 12px 15px 0px;
+    padding: 6px 12px;
+font-size: 14px;
+font-weight: normal;
+line-height: 1;
+color: #555;
+text-align: center;
+border-radius: 4px;
+display: table-cell;
+width: 1%;
+white-space: nowrap;
+vertical-align: middle;
+}
+
+.form-group {
+    padding-bottom: 7px;
+    margin: 27px 0 0 0;
+    position: relative;
+  
+}
+
+input{
+  border-bottom: none !important;
+}
+
+/*end of form*/
 
  /*more aniumate end*/
   .eyebrow-text{
@@ -510,7 +609,7 @@ left: 7px;
     .form-this-nice {
         margin-top: 20px;
     }
-
+/*
 .signup-prompt-container {
   position: fixed;
 bottom: 0 !important;
@@ -527,7 +626,7 @@ background-color: #ff5a5f;
   display: table;
   position: relative;
   margin: 0 auto;
-}
+}*/
 
 
 

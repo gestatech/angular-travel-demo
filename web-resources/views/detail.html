@@ -1,6 +1,6 @@
 <div id="form-container" class="detail-page">
 
-    <div class="col-lg-6">
+    <div class="col-lg-6 page-header">
         <img src="{{selectedTour.image['@link']}}" alt="tour image" class="detail-img" height="310" width="510"/>
 
         <hr/>
@@ -66,15 +66,15 @@
     <!-- <div class="form-this-nice"> -->
 <div class="col-lg-6">
   <ul class="detail-body">
-      <li>
+      <li class="detail-points">
           Location:
           {{ selectedTour.location }}
       </li>
-      <li>
+      <li class="detail-points">
           Duration:
           {{ selectedTour.duration }}
       </li>
-      <li>
+      <li class="detail-points">
           Tour Operator:
           {{ selectedTour.author }}
       </li>
@@ -82,21 +82,25 @@
             <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
 
                 <div class="form-group">
+                  <i class="material-icons">account_circle</i>
                     <label class="form-text">Name</label>
                     <input type="text" name="name" class="form-control" ng-model="name" required>
                 </div>
 
                 <div class="form-group">
+                  <i class="material-icons">email</i>
                     <label class="form-text">Email</label>
                     <input type="email" name="email" class="form-control" ng-model="email">
                 </div>
 
                 <div class="form-group">
+                  <i class="material-icons">phone</i>
                     <label class="form-text">Phone</label>
                     <input type="email" name="email" class="form-control" ng-model="email">
                 </div>
 
                 <div class="form-group">
+                  <i class="material-icons">people</i>
                     <label class="form-text">Number of Travellers</label>
                     <input type="email" name="email" class="form-control" ng-model="email">
                 </div>
@@ -106,6 +110,16 @@
                 </a>
 
             </form>
+
+            <form>
+              <div class="group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+              </div>
+            </form>
+
 
         </div>
 

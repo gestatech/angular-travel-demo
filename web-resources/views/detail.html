@@ -64,7 +64,7 @@
 
           <!-- Original form is below  -->
     <!-- <div class="form-this-nice"> -->
-<div class="col-lg-6">
+<div class="col-lg-6 info-checkout">
   <ul class="detail-body">
       <li class="detail-points">
           Location:
@@ -96,13 +96,13 @@
                 <div class="form-group">
                   <i class="material-icons">phone</i>
                     <label class="form-text">Phone</label>
-                    <input type="email" name="email" class="form-control" ng-model="email">
+                    <input type="phone" name="phone" class="form-control" ng-model="phone">
                 </div>
 
                 <div class="form-group">
                   <i class="material-icons">people</i>
                     <label class="form-text">Number of Travellers</label>
-                    <input type="email" name="email" class="form-control" ng-model="email">
+                    <input type="people" name="people" class="form-control" ng-model="people">
                 </div>
 
                 <a ng-href="#/checkout/{{selectedTour['@name']}}" class="btn btn-default form-submit buttons" role="button">Instant Book
@@ -111,14 +111,6 @@
 
             </form>
 
-            <form>
-              <div class="group">
-                <input type="text" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Name</label>
-              </div>
-            </form>
 
 
         </div>

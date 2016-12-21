@@ -112,7 +112,7 @@
                 console.log('destinations',$scope.destinations);
                 console.log('tourTypes',$scope.tourTypes)
             }])
-            // Above closes the MainController
+            
 
             .controller('DetailController', ['$scope','$routeParams' ,function($scope,$routeParams,$sanitize){
                 var detailId = $routeParams.id;

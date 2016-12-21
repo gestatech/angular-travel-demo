@@ -614,6 +614,10 @@ left: 7px;
       font-size: 21px;
       font-weight: 400;
     }
+
+    .info-checkout {
+      margin-top: 41px;
+    }
 /*
 .signup-prompt-container {
   position: fixed;

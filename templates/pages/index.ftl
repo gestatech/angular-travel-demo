@@ -5,7 +5,6 @@
     [#include "../includes/head.ftl"]
 
     [@cms.page /]
-    <!-- <base href="/index.ftl/" target="_blank"> -->
   </head>
   <body ng-app="travel"  ng-controller="MainController">
    [#include "../includes/header.ftl"]
@@ -16,33 +15,6 @@
 
 
     <script>
-    // $(window).load(function(){
-    //     var $container = $('.searchContainer');
-    //     $container.isotope({
-    //         filter: '*',
-    //         animationOptions: {
-    //             duration: 750,
-    //             easing: 'linear',
-    //             queue: false
-    //         }
-    //     });
-    //
-    //     $('.searchFilter select').click(function(){
-    //         $('.searchContainer .current').removeClass('current');
-    //         $(this).addClass('current');
-    //
-    //         var selector = $(this).attr('data-filter');
-    //         $container.isotope({
-    //             filter: selector,
-    //             animationOptions: {
-    //                 duration: 750,
-    //                 easing: 'linear',
-    //                 queue: false
-    //             }
-    //          });
-    //          return false;
-    //     });
-    // });
 
 
     [#assign workspace = "tours"]
@@ -112,7 +84,7 @@
                 console.log('destinations',$scope.destinations);
                 console.log('tourTypes',$scope.tourTypes)
             }])
-            
+
 
             .controller('DetailController', ['$scope','$routeParams' ,function($scope,$routeParams,$sanitize){
                 var detailId = $routeParams.id;

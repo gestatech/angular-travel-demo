@@ -8,11 +8,15 @@
 <link rel="stylesheet" type="text/css" media="only screen and (max-width: 1035px), only screen and (max-device-width: 1035px)" href="${ctx.contextPath}/.resources/magnolia-travels/web-resources/css/med-device.css" />
 
 <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet"> -->
+<link href="${ctx.contextPath}/.resources/magnolia-travels/web-resources/css/raleway.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.0/css/bootstrap-select.min.css"> -->
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet" />
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet" />
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+<link href="${ctx.contextPath}/.resources/magnolia-travels/web-resources/css/font-awesome.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+<link href="${ctx.contextPath}/.resources/magnolia-travels/web-resources/css/icons.css" rel="stylesheet">
+
 <!-- Compiled and minified CSS -->
  <link rel="stylesheet" href="${ctx.contextPath}/.resources/magnolia-travels/web-resources/css/materialize.min.css">
 

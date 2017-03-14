@@ -1,26 +1,27 @@
-# Shareable - Component template for Magnolia CMS  (Demonstrates how to share light modules.)
+# angular-travel-demo
 
-> [Provide a basic description in one sentence.]
+A demonstration of a single page Angular 1 app using content from the Magnolia Travel Demo.   
 
 ## Features
 > [Provide a list of the key features this component provides for content authors. Include screenshots of the rendered component and the dialog.]
 
-![Demo page with component](_dev/README-shareable.png)
+![](_dev/README-atd-index.png)
 
-![Component Dialog](_dev/README-shareable-dialog.png)
+![](_dev/README-atd-detail.png)
+
+* A page template delivers an Angular 1, single page app including Angular navigation via # to detail pages.
+* Reflects any changes made in the Tours and Tour Categories content apps.
+* Demonstrates accessing content as json via jsonfn module.
+* Demonstrates headless CMS techniques.
 
 ## Usage
-> [Provide details of how a developer can make the component template available to content authors. This can include any special instructions about webresources or availability. This could include instructions on 3rd party dependencies such as jquery.
-Describe how a template can be configured with parameters if applicable.]
 
-Make the component available to authors, and include the files in `webresources` on your pages using standard magnolia techniques.
+The jsonfn module must be available. You can get it at https://nexus.magnolia-cms.com/service/local/repositories/magnolia.forge.releases/content/info/magnolia/templating/magnolia-jsonfn/1.0.7/magnolia-jsonfn-1.0.7.jar. For your convienience it is also available in the `_dev/jars` directory.
 
-(To make this component available on the mtk basic page, you could use the decoration included in `_dev/decorations`.)
+Copy this jar into Magnolia's `WEB-INF/libs` directory and restart the server.
 
-## Demo
-> [Provide how to view any included demonstration pages.]
+Create a page, and use the 'Angular Travel Demo' template.
 
-To see a page demonstrating this component, open the Pages app in Magnolia AdminCentral and import the files in `_dev/demos`. (Import it directly at the root of the tree to see an example of the included css styling.)
 
 ## Information on Magnolia CMS
 This directory is a Magnolia 'light module'.
@@ -28,12 +29,6 @@ This directory is a Magnolia 'light module'.
 https://docs.magnolia-cms.com
 
 Search the docs for `sharing light modules` for details on how to share and use light modules on npm and github.
-
-
-## Contribute to the Magnolia component ecosystem
-It's easy to create components for Magnolia and share them on github and npm. I invite you to do so and join the community. Let's stop wasting time by developing the same thing again and again, rather let's help each other out by sharing our work and create a rich library of components.
-
-Just add `magnolia-light-module` as a keyword to npm's package.json to make them easy to find and use on npm.
 
 ## License
 
@@ -43,4 +38,4 @@ MIT
 
 Magnolia, https://magnolia-cms.com
 
-Christopher Zimmermann, @topherzee
+Iran Campos, @icdozen

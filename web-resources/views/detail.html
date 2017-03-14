@@ -9,8 +9,9 @@
         <p class="second-description">
             {{ selectedTour.description}}
         </p>
-        <p class="detail-body">
-            {{ selectedTour.body | removeHTMLTags}}
+        <p ng-bind-html="selectedTour.body" class="detail-body"> 
+
+            <!-- {{ selectedTour.body | removeHTMLTags}} -->
             <!-- {{ selectedTour.body }} -->
         </p>
     </div>

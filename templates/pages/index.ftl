@@ -54,19 +54,19 @@
 
               $routeProvider
               .when('/', {
-                 templateUrl : '${ctx.contextPath}/.resources/magnolia-travels/web-resources/views/index.html',
+                 templateUrl : '${ctx.contextPath}/.resources/magnolia-travels/webresources/views/index.html',
                  controller: 'MainController'
                })
               .when('/destination/:id', {
-                templateUrl : '${ctx.contextPath}/.resources/magnolia-travels/web-resources/views/destinations.html',
+                templateUrl : '${ctx.contextPath}/.resources/magnolia-travels/webresources/views/destinations.html',
                 controller  : 'dashboardController'
               })
              .when('/detail/:id', {
-               templateUrl : '${ctx.contextPath}/.resources/magnolia-travels/web-resources/views/detail.html',
+               templateUrl : '${ctx.contextPath}/.resources/magnolia-travels/webresources/views/detail.html',
                controller  : 'DetailController'
              })
              .when('/checkout/:id', {
-               templateUrl : '${ctx.contextPath}/.resources/magnolia-travels/web-resources/views/checkout.html',
+               templateUrl : '${ctx.contextPath}/.resources/magnolia-travels/webresources/views/checkout.html',
                controller  : 'DetailController'
              });
 

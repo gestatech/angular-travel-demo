@@ -5,7 +5,6 @@
        <img src="${ctx.contextPath}/.resources/magnolia-travels/web-resources/img/Magnolia-orange.png" class="logo" alt="Magnolia Logo">
      </a>
    </div>
-   
-
+  
  </div>
 </nav>

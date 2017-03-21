@@ -49,7 +49,7 @@
 
 
         (function () {
-          var travel = angular.module('travel',['ngRoute', 'ngAnimate' ,'ngSanitize', 'ui', 'ui.filters', 'wu.masonry']);
+          var travel = angular.module('travel',['ngRoute', 'ngAnimate' ,'ngSanitize', 'ui', 'ui.filters']);
             travel.config(function($routeProvider) {
 
               $routeProvider
@@ -57,10 +57,6 @@
                  templateUrl : '${ctx.contextPath}/.resources/angular-travel-demo/webresources/views/index.html',
                  controller: 'MainController'
                })
-              .when('/destination/:id', {
-                templateUrl : '${ctx.contextPath}/.resources/angular-travel-demo/webresources/views/destinations.html',
-                controller  : 'dashboardController'
-              })
              .when('/detail/:id', {
                templateUrl : '${ctx.contextPath}/.resources/angular-travel-demo/webresources/views/detail.html',
                controller  : 'DetailController'
@@ -70,9 +66,7 @@
                controller  : 'DetailController'
              });
 
-            })
-
-
+           })
 
             travel.controller('MainController', ['$scope',function($scope){
                 $scope.searchLocation   = [];
@@ -85,7 +79,6 @@
                 console.log('tourTypes',$scope.tourTypes)
             }])
 
-
             .controller('DetailController', ['$scope','$routeParams' ,function($scope,$routeParams,$sanitize){
                 var detailId = $routeParams.id;
 
@@ -95,68 +88,8 @@
                   }
                 });
 
-
                 console.log('selectedTour',$scope.selectedTour);
             }])
-
-
-            .controller('dashboardController', ['$scope','$routeParams', function($scope,$routeParams){
-                // console.log($scope);
-
-                $scope.selectedDestination = $routeParams.id;
-                console.log('selectedDestination',$scope.selectedDestination);
-
-            }])
-
-            .controller('weekendController', ['$scope',function($scope){
-                $scope.tours = json;
-
-                $scope.limit = 3;
-            }])
-
-            .controller('locationController', ['$scope', function($scope){
-                $scope.tours = json;
-                $scope.destinations = jsonDest;
-
-
-                 angular.forEach($scope.tours, function(item){
-                  console.log(item.location);
-                    $scope.message = item.destiantion
-                });
-
-            }])
-
-            .filter('removeHTMLTags', function() {
-          	return function(text) {
-          		return  text ? String(text).replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '') : "";
-              // return unescape(text);
-          	};
-
-          })
-
-          .filter("removeDups", function(){
-          return function(data) {
-            if(angular.isArray(data)) {
-              var result = [];
-              var key = {};
-              for(var i=0; i<data.length; i++) {
-                var val = data[i];
-                if(angular.isUndefined(key[val])) {
-                  key[val] = val;
-                  result.push(val);
-                }
-              }
-              if(result.length > 0) {
-                return result;
-              }
-            }
-            return data;
-          }
-          })
-
-
-
-
 
         })();
     </script>
